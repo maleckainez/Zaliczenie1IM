@@ -1,0 +1,259 @@
+<mxfile host="Electron" modified="2024-02-06T20:34:55.877Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="bcayr9lDrA6RoRmbgdJN" version="23.0.2" type="device">
+  <diagram name="Strona-1" id="LoIhmsM3k1W91ekIoNwY">
+    <mxGraphModel dx="1590" dy="1212" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-18" target="0YZWf_vBpHwigLN9SsZy-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-18" value="Uruchomienie OfficeHelper.py" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="38" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-24" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-21" target="0YZWf_vBpHwigLN9SsZy-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-26" value="TAK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-21" target="0YZWf_vBpHwigLN9SsZy-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-21" value="Czy otwiera się Okno Logowania" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="200" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-23" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="274" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-28" value="TAK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-25" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="274" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-32" value="NIE, pojawia się stosowny&lt;br&gt;&amp;nbsp;prompt informujący o&lt;br&gt;&amp;nbsp;błędnych danych logowania" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-25" target="0YZWf_vBpHwigLN9SsZy-31" edge="1">
+          <mxGeometry x="0.1667" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-40" value="NIE, brak informacji o &lt;br&gt;błędnych danych logowania" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="0YZWf_vBpHwigLN9SsZy-25" target="0YZWf_vBpHwigLN9SsZy-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="334" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="98" y="410" />
+              <mxPoint x="334" y="410" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-25" value="Czy po kliknięciu przycisku zaloguj przechodzi dalej" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="320" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-30" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="274" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-35" value="TAK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-31" target="0YZWf_vBpHwigLN9SsZy-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-31" target="0YZWf_vBpHwigLN9SsZy-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-43" value="NIE, pojawia się stosowny&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;prompt informujący o&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;błędnych danych logowania" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="0YZWf_vBpHwigLN9SsZy-37" vertex="1" connectable="0">
+          <mxGeometry x="-0.2519" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-31" value="Czy po wpisaniu samego loginu i kliknięciu przycisku, przechodzi dalej" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="520" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-33" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="274" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-36" value="Czy po wpisaniu błędnego loginu / hasła, przechodzi dalej" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="720" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-46" value="NIE, brak informacji o &lt;br&gt;błędnych danych logowania" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry x="0.0025" relative="1" as="geometry">
+            <mxPoint x="98" y="600" as="sourcePoint" />
+            <mxPoint x="334" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="98" y="610" />
+              <mxPoint x="334" y="610" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-49" value="TAK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="0YZWf_vBpHwigLN9SsZy-50" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="176" y="760" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-50" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="274" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-51" value="NIE, brak informacji o &lt;br&gt;błędnych danych logowania" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry x="0.0025" relative="1" as="geometry">
+            <mxPoint x="98" y="800" as="sourcePoint" />
+            <mxPoint x="334" y="790" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="98" y="810" />
+              <mxPoint x="334" y="810" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="97.57999999999998" y="800" as="sourcePoint" />
+            <mxPoint x="97.57999999999998" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-53" value="NIE, pojawia się stosowny&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;prompt informujący o&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;błędnych danych logowania" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="0YZWf_vBpHwigLN9SsZy-52" vertex="1" connectable="0">
+          <mxGeometry x="-0.2519" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-54" value="Czy po wpisaniu poprawnego hasła i loginu przechodzi dalej" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="920" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-55" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="0YZWf_vBpHwigLN9SsZy-56" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="176" y="960" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-56" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="274" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-57" value="NIE, pojawia się informacja o&amp;nbsp;&lt;br&gt;błędnych danych logowania" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry x="0.0025" relative="1" as="geometry">
+            <mxPoint x="98" y="1000" as="sourcePoint" />
+            <mxPoint x="334" y="990" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="98" y="1010" />
+              <mxPoint x="334" y="1010" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="0YZWf_vBpHwigLN9SsZy-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="97.57999999999998" y="1000" as="sourcePoint" />
+            <mxPoint x="97.57999999999998" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-63" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="0YZWf_vBpHwigLN9SsZy-62" vertex="1" connectable="0">
+          <mxGeometry x="-0.2519" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-61" value="Zamknij program, przejdź do testu Nr2" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="38" y="1070" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-65" value="" style="shape=link;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="420" y="1160" as="sourcePoint" />
+            <mxPoint x="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-66" value="PROCEDURA TESTOWA NR 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="110" y="20" width="194" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-67" value="PROCEDURA TESTOWA NR 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="540" y="20" width="194" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-69" target="0YZWf_vBpHwigLN9SsZy-71" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-69" value="Uruchomienie OfficeHelper.py" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="458" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-70" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-71" target="0YZWf_vBpHwigLN9SsZy-72" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-71" target="0YZWf_vBpHwigLN9SsZy-81" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMT2PS8n8qIURqA5Z2nF-1" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0YZWf_vBpHwigLN9SsZy-82">
+          <mxGeometry x="-0.35" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-71" value="Czy po wpisaniu loginu CAPS LOCKIEM i poprawnego hasła przechodzi dalej?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="170" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-72" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="694" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-81" value="Zamknij program, przejdź do testu Nr3" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="458" y="290" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-83" value="" style="shape=link;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="420" y="390" as="sourcePoint" />
+            <mxPoint x="820" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-84" value="PROCEDURA TESTOWA NR 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="540" y="410" width="194" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-85" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-86" target="0YZWf_vBpHwigLN9SsZy-89" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-86" value="Uruchomienie OfficeHelper.py" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="458" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-87" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-89" target="0YZWf_vBpHwigLN9SsZy-90" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-89" target="0YZWf_vBpHwigLN9SsZy-91" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMT2PS8n8qIURqA5Z2nF-2" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0YZWf_vBpHwigLN9SsZy-88">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-89" value="Czy po wpisaniu loginu małymi literami i poprawnego hasła przechodzi dalej?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="560" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-90" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="694" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-91" value="Zamknij program, przejdź do testu Nr4" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="458" y="680" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-92" value="" style="shape=link;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="420" y="780" as="sourcePoint" />
+            <mxPoint x="820" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-93" value="PROCEDURA TESTOWA NR 4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="540" y="800" width="194" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-100" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-101" target="0YZWf_vBpHwigLN9SsZy-104" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-101" value="Uruchomienie OfficeHelper.py" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="458" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-102" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-104" target="0YZWf_vBpHwigLN9SsZy-105" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-103" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-104" target="0YZWf_vBpHwigLN9SsZy-106" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMT2PS8n8qIURqA5Z2nF-3" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0YZWf_vBpHwigLN9SsZy-103">
+          <mxGeometry x="-0.1469" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-104" value="Czy po wpisaniu Na PrZeMiAn i poprawnego hasła przechodzi dalej?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="930" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-105" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="694" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-106" value="Nie zamykaj programu,przejdź do testu Nr5" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="458" y="1050" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

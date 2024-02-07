@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>627</width>
+    <height>840</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="okno_biale">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>20</y>
+     <width>550</width>
+     <height>800</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(255, 255, 255, 255);
+border-radius: 40px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text1">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>40</y>
+     <width>491</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 14pt &quot;Futura&quot;;
+color: rgba(0, 0, 0, 200)</string>
+   </property>
+   <property name="text">
+    <string>Dodanie nowego elementu w rejestrze</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tlo_biale">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>9</y>
+     <width>570</width>
+     <height>820</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(255, 255, 255, 70);
+border-radius: 47px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="zamknij">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>40</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton#zamknij{
+	background-color: rgba(0, 0, 0,20);
+	font: 500 14pt &quot;Futura&quot;;
+	color: rgba(0,0,0,250);
+	border-radius:10px;
+}QPushButton#zamknij:hover{
+	background-color: rgba(0, 0, 0,40);
+}QPushButton#zamknij:pressed{
+	background-color: rgba(0, 0, 0,80);
+	color: rgba(0,0,0,100);
+	border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Anuluj</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="login">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>170</y>
+     <width>391</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli nie posiada, pozostaw to okno puste&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(255, 255, 255));
+color:rgba(0, 0, 0, 150);
+padding-bottom:0px;
+font: 500 12pt &quot;Futura&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Numer wewnętrzny dokumentu</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>100</y>
+     <width>391</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox{
+background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(255, 255, 255));
+color:rgba(0, 0, 0, 150);
+padding-bottom:0px;
+font: 500 12px  &quot;Futura&quot;;}
+
+
+QComboBox QAbstractItemView {
+    background-color: rgba(255, 255, 255, 255);  /* Kolor tła rozwijanego okna, przykładowo białego */
+    border: 1px solid rgba(0, 0, 0, 150);  /* Kolor obramowania rozwijanego okna z 150 (0-255) stopniami przeźroczystości */
+}</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Wybierz rodzaj dokumentu</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dokument wychodzący</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dokument przychodzący</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="text1_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>205</y>
+     <width>381</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 12pt &quot;Futura&quot;;
+color: rgba(0, 0, 0, 40)</string>
+   </property>
+   <property name="text">
+    <string>Jeżeli nie posiada, okno pozostaw puste</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="login_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>240</y>
+     <width>391</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli nie posiada, pozostaw to okno puste&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(255, 255, 255));
+color:rgba(0, 0, 0, 150);
+padding-bottom:0px;
+font: 500 12pt &quot;Futura&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Nadawca/ Autor dokumentu</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="login_3">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>310</y>
+     <width>391</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli nie posiada, pozostaw to okno puste&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(255, 255, 255));
+color:rgba(0, 0, 0, 150);
+padding-bottom:0px;
+font: 500 12pt &quot;Futura&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Odbiorca dokumentu</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="login_4">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>380</y>
+     <width>391</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Futura</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jeżeli nie posiada, pozostaw to okno puste&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(255, 255, 255));
+color:rgba(0, 0, 0, 150);
+padding-bottom:0px;
+font: 500 12pt &quot;Futura&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Tytuł pisma/ dokumentu</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="uwagi">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>450</y>
+     <width>381</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(255, 255, 255));
+color:rgba(0, 0, 0, 150);
+padding-bottom:0px;
+font: 500 12pt &quot;Futura&quot;;</string>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Futura'; font-size:12pt; font-weight:500; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="placeholderText">
+    <string>Krótki opis dokumentu/ Uwagi</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text1_3">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>570</y>
+     <width>411</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 12pt &quot;Futura&quot;;
+color:rgba(0, 0, 0, 150);</string>
+   </property>
+   <property name="text">
+    <string>Numer katalogowy dokumentu - umieść go na pierwszej stronie dokumentu</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="kod_katalogowy">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>600</y>
+     <width>411</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 14pt &quot;Futura&quot;;
+color:rgba(0, 0, 0, 255);</string>
+   </property>
+   <property name="text">
+    <string>{kod_katalogowy}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="zatwierdz">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>760</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton#zatwierdz{
+	background-color: rgba(0, 200, 0,20);
+	font: 500 14pt &quot;Futura&quot;;
+	color: rgba(0,0,0,250);
+	border-radius:10px;
+}QPushButton#zatwierdz:hover{
+	background-color: rgba(0, 200, 0,40);
+}QPushButton#zatwierdz:pressed{
+	background-color: rgba(0, 200, 0,80);
+	color: rgba(0,0,0,100);
+	border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Zapisz</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text1_4">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>630</y>
+     <width>461</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 12pt &quot;Futura&quot;;
+color:rgba(0, 0, 0, 150);</string>
+   </property>
+   <property name="text">
+    <string>Jeżeli urządzenia posiada zainstalowaną drukarkę do etykiet 
+wydrukuj i naklej ten kod kreskowy:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="drukuj">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>700</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton#drukuj{
+	background-color: rgba(0, 0, 0,20);
+	font: 500 14pt &quot;Futura&quot;;
+	color: rgba(0,0,0,250);
+	border-radius:10px;
+}QPushButton#drukuj:hover{
+	background-color: rgba(0, 0, 0,40);
+}QPushButton#drukuj:pressed{
+	background-color: rgba(0, 0, 0,80);
+	color: rgba(0,0,0,100);
+	border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Drukuj kod</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="kod_kreskowy">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>680</y>
+     <width>290</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 13pt &quot;Futura&quot;;
+color: orange;
+background-color: rgba(100,100,100,200)</string>
+   </property>
+   <property name="text">
+    <string>MIEJSCE NA
+KOD KRESKOWY</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>tlo_biale</zorder>
+  <zorder>okno_biale</zorder>
+  <zorder>text1</zorder>
+  <zorder>zamknij</zorder>
+  <zorder>login</zorder>
+  <zorder>comboBox</zorder>
+  <zorder>text1_2</zorder>
+  <zorder>login_2</zorder>
+  <zorder>login_3</zorder>
+  <zorder>login_4</zorder>
+  <zorder>uwagi</zorder>
+  <zorder>text1_3</zorder>
+  <zorder>kod_katalogowy</zorder>
+  <zorder>zatwierdz</zorder>
+  <zorder>text1_4</zorder>
+  <zorder>drukuj</zorder>
+  <zorder>kod_kreskowy</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

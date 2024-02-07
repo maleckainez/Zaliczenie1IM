@@ -1,0 +1,7 @@
+code128==0.3
+peewee==3.17.0
+pillow==10.2.0
+PyQt6==6.6.1
+PyQt6-Qt6==6.6.1
+PyQt6-sip==13.6.0
+python-barcode==0.15.1

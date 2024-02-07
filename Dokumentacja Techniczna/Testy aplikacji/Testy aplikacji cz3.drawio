@@ -1,0 +1,364 @@
+<mxfile host="Electron" modified="2024-02-06T20:41:51.975Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="feONpAKkokbpl7JydbQy" version="23.0.2" type="device">
+  <diagram name="Strona-1" id="LoIhmsM3k1W91ekIoNwY">
+    <mxGraphModel dx="954" dy="727" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-18" target="0YZWf_vBpHwigLN9SsZy-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-18" value="Przejście z procedury testowej Nr 5" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="38" y="65" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-24" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-21" target="0YZWf_vBpHwigLN9SsZy-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-26" value="TAK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-21" target="0YZWf_vBpHwigLN9SsZy-25" edge="1">
+          <mxGeometry x="-0.25" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-21" value="Czy w oknie widać wszystkie formularze oraz spis userów" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="165" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-23" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="274" y="175" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="0YZWf_vBpHwigLN9SsZy-25" target="rpIl013AEwX_hjBP_hCJ-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-4" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-2" vertex="1" connectable="0">
+          <mxGeometry x="-0.1201" relative="1" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-23" value="TAK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="0YZWf_vBpHwigLN9SsZy-25" target="0YZWf_vBpHwigLN9SsZy-30" edge="1">
+          <mxGeometry x="-0.8225" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="325" />
+              <mxPoint x="240" y="660" />
+              <mxPoint x="274" y="660" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-25" value="Czy można dodać użytkownika z pustymi polami wpisywania" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="285" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-30" value="Zgłoś błąd, opisz go w rejestrz&lt;span style=&quot;white-space: pre;&quot;&gt;e,  napisz &lt;br/&gt;czy pojawił się&lt;br/&gt; komunikat &lt;br&gt;o błędzie &lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="280" y="610" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="0YZWf_vBpHwigLN9SsZy-66" value="PROCEDURA TESTOWA NR 6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="317" y="20" width="194" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_BtvG3M7fM2tkYKGzCa-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-29" target="rpIl013AEwX_hjBP_hCJ-33" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="70" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="98" y="1080" />
+              <mxPoint x="420" y="1080" />
+              <mxPoint x="420" y="70" />
+            </Array>
+            <mxPoint x="100" y="1080" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u_BtvG3M7fM2tkYKGzCa-59" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="u_BtvG3M7fM2tkYKGzCa-58" vertex="1" connectable="0">
+          <mxGeometry x="0.2796" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-1" target="rpIl013AEwX_hjBP_hCJ-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-9" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-8" vertex="1" connectable="0">
+          <mxGeometry x="-0.5808" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-1" target="0YZWf_vBpHwigLN9SsZy-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="440" />
+              <mxPoint x="240" y="660" />
+              <mxPoint x="274" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-24" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.7313" y="2" relative="1" as="geometry">
+            <mxPoint x="-2" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-1" value="Czy można dodać użytkownika uzupełniając login, nie podając nic innego" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="400" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-7" target="rpIl013AEwX_hjBP_hCJ-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-66" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-11" vertex="1" connectable="0">
+          <mxGeometry x="0.3529" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-7" target="0YZWf_vBpHwigLN9SsZy-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="550" />
+              <mxPoint x="240" y="660" />
+              <mxPoint x="274" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-25" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-19" vertex="1" connectable="0">
+          <mxGeometry x="-0.6203" y="3" relative="1" as="geometry">
+            <mxPoint y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-7" value="Czy można dodać użytkownika nie podając nic poza loginem i hasłem" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="510" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-13" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-10" target="rpIl013AEwX_hjBP_hCJ-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-10" target="0YZWf_vBpHwigLN9SsZy-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="274" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-26" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-18" vertex="1" connectable="0">
+          <mxGeometry x="-0.6306" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-10" value="Czy można dodać użytkownika nie podając tylko imienia" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="620" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-15" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-12" target="rpIl013AEwX_hjBP_hCJ-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-12" target="0YZWf_vBpHwigLN9SsZy-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="770" />
+              <mxPoint x="240" y="660" />
+              <mxPoint x="274" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-27" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-21" vertex="1" connectable="0">
+          <mxGeometry x="-0.77" y="-1" relative="1" as="geometry">
+            <mxPoint x="4" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-12" value="Czy można dodać użytkownika nie podając tylko nazwiska" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="730" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-14" target="0YZWf_vBpHwigLN9SsZy-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="880" />
+              <mxPoint x="240" y="660" />
+              <mxPoint x="274" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-28" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-22" vertex="1" connectable="0">
+          <mxGeometry x="-0.8315" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-14" target="rpIl013AEwX_hjBP_hCJ-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-67" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-30" vertex="1" connectable="0">
+          <mxGeometry x="0.2628" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-14" value="Czy można dodać użytkownika nie wybierając tylko uprawnień" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="840" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-29" target="0YZWf_vBpHwigLN9SsZy-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="990" />
+              <mxPoint x="240" y="660" />
+              <mxPoint x="274" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U7keuNdoYyQriRIVTHhc-1" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rpIl013AEwX_hjBP_hCJ-35">
+          <mxGeometry x="-0.8664" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-29" value="Czy po uzupełnieniu wszystkich pól z powtarzającym się loginem można dodać usera?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="950" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-33" target="rpIl013AEwX_hjBP_hCJ-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="657" y="100" />
+              <mxPoint x="756" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-38" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" parent="rpIl013AEwX_hjBP_hCJ-37" vertex="1" connectable="0">
+          <mxGeometry x="0.0721" y="3" relative="1" as="geometry">
+            <mxPoint x="-32" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-33" target="rpIl013AEwX_hjBP_hCJ-39" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="579" y="95" />
+              <mxPoint x="518" y="95" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-42" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-41" vertex="1" connectable="0">
+          <mxGeometry x="0.3172" relative="1" as="geometry">
+            <mxPoint y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-33" value="Czy po uzupełnieniu okien poprawnie można dodać usera?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="540" y="30" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-36" value="Zgłoś błąd, opisz go w rejestrze" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="696" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-43" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-39" target="rpIl013AEwX_hjBP_hCJ-36" edge="1">
+          <mxGeometry x="-0.12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-46" value="TAK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-39" target="rpIl013AEwX_hjBP_hCJ-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-39" value="Czy po dodaniu usera, spis userów został zaktualizowany?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="140" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-45" target="rpIl013AEwX_hjBP_hCJ-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-73" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-48" vertex="1" connectable="0">
+          <mxGeometry x="-0.8553" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-45" target="rpIl013AEwX_hjBP_hCJ-49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-68" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-50" vertex="1" connectable="0">
+          <mxGeometry x="0.0825" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-45" value="Czy bez wybrania użytkownika można zmienić login?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="260" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-47" value="Zgłoś błąd, opisz go w rejestrz&lt;span style=&quot;white-space: pre;&quot;&gt;e,  napisz &lt;br/&gt;czy pojawił się&lt;br/&gt; komunikat &lt;br&gt;o błędzie &lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="690" y="535" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-49" target="rpIl013AEwX_hjBP_hCJ-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-72" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-51" vertex="1" connectable="0">
+          <mxGeometry x="-0.8477" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-53" value="NIE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-49" target="rpIl013AEwX_hjBP_hCJ-52" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-49" value="Czy po wybraniu usera można zmienić login na pusty?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="370" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-52" target="rpIl013AEwX_hjBP_hCJ-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-71" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-54" vertex="1" connectable="0">
+          <mxGeometry x="-0.694" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-52" target="rpIl013AEwX_hjBP_hCJ-55" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-74" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-56" vertex="1" connectable="0">
+          <mxGeometry x="0.1033" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-52" value="Czy po wybraniu usera można zmienić login na już istniejący?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="490" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-57" value="TAK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-55" target="rpIl013AEwX_hjBP_hCJ-47" edge="1">
+          <mxGeometry x="-0.6777" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-55" target="rpIl013AEwX_hjBP_hCJ-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-75" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-59" vertex="1" connectable="0">
+          <mxGeometry x="0.2905" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-55" value="Czy po wybraniu usera można zmienić login na unikalny?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="600" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-58" target="rpIl013AEwX_hjBP_hCJ-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670.0000000000002" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-76" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-60" vertex="1" connectable="0">
+          <mxGeometry x="-0.8374" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-58" target="rpIl013AEwX_hjBP_hCJ-61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-77" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-62" vertex="1" connectable="0">
+          <mxGeometry x="0.1634" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-58" value="Czy można dodać login zawierający wielkie litery?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="710" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rpIl013AEwX_hjBP_hCJ-61" target="rpIl013AEwX_hjBP_hCJ-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-78" value="NIE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-63" vertex="1" connectable="0">
+          <mxGeometry x="-0.8295" y="1" relative="1" as="geometry">
+            <mxPoint x="-9" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rpIl013AEwX_hjBP_hCJ-61" target="rpIl013AEwX_hjBP_hCJ-64" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-79" value="TAK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rpIl013AEwX_hjBP_hCJ-65" vertex="1" connectable="0">
+          <mxGeometry x="-0.0283" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-61" value="Czy po udanej zmianie loginu, spis aktualizuje się?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="440" y="820" width="156" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rpIl013AEwX_hjBP_hCJ-64" value="Przejdź do procedury testowej Nr 7" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="458" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

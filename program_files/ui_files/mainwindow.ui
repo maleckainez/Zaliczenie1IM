@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainwindow</class>
+ <widget class="QWidget" name="mainwindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>972</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>311</width>
+     <height>650</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <stylestrategy>PreferAntialias</stylestrategy>
+     <hintingpreference>PreferFullHinting</hintingpreference>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color:rgba(255, 255, 255, 70);
+border-radius: 47px;
+border-bottom-right-radius: 0px;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>170</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 14pt &quot;Futura&quot;;
+color: rgba(0, 0, 0, 200)</string>
+   </property>
+   <property name="text">
+    <string>Ostatnio wprowadzone rejestry:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="rejestr">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>370</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#rejestr{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(189, 224, 254));
+	font: 500 16pt &quot;Futura&quot;;
+	color:rgba(10, 10, 10, 210);
+	border-radius:10px;
+}
+
+QPushButton#rejestr:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(215, 190, 229), stop:1 rgb(199, 234, 255));
+}
+
+QPushButton#rejestr:pressed{
+	padding-left:2px;
+	padding-top:2px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(185, 160, 199), stop:1 rgb(169, 204, 225));
+}</string>
+   </property>
+   <property name="text">
+    <string>Otwórz Rejestr</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="formularz">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>300</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#formularz{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(189, 224, 254));
+	font: 500 16pt &quot;Futura&quot;;
+	color:rgba(10, 10, 10, 210);
+	border-radius:10px;
+}
+
+QPushButton#formularz:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(215, 190, 229), stop:1 rgb(199, 234, 255));
+}
+
+QPushButton#formularz:pressed{
+	padding-left:2px;
+	padding-top:2px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(185, 160, 199), stop:1 rgb(169, 204, 225));
+}</string>
+   </property>
+   <property name="text">
+    <string>Dodaj Dokument</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>240</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 14pt &quot;Futura&quot;;
+color: rgba(0,0, 0, 200)</string>
+   </property>
+   <property name="text">
+    <string>Narzędzia:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>55</x>
+     <y>365</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0,10);
+color: rgb(0,0,0);
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="build">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>600</y>
+     <width>291</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align: center;
+color:rgba(0, 0, 0, 100);</string>
+   </property>
+   <property name="text">
+    <string>Copywright Inez Malecka 
+Build {wersja}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="zalogowano">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>510</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 12pt &quot;Futura&quot;;
+color: rgba(0, 0, 0, 200)</string>
+   </property>
+   <property name="text">
+    <string>Zalogowano: {User}, 
+Uprawnienia użytkownika: {uprawnienia}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="wyloguj">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>560</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton#wyloguj{
+	background-color: rgba(0, 0, 0,20);
+	font: 500 14pt &quot;Futura&quot;;
+	color: rgba(0,0,0,250);
+	border-radius:10px;
+}QPushButton#wyloguj:hover{
+	background-color: rgba(0, 0, 0,40);
+}QPushButton#wyloguj:pressed{
+	background-color: rgba(0, 0, 0,80);
+	color: rgba(0,0,0,100);
+	border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Wyloguj Się</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>55</x>
+     <y>295</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0,10);
+color: rgb(0,0,0);
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tlo_biale">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>291</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(255, 255, 255, 255);
+border-radius: 45px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tlo_biale_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>170</y>
+     <width>621</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(255, 255, 255, 255);
+border-radius: 40px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="zamknij">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>40</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#zamknij{
+	background-color: rgba(255, 38, 0, 100);
+	border-radius:7px;
+}
+
+QPushButton#zamknij:hover{
+	background-color: rgba(255, 38, 0, 170);
+	border-radius:7px;
+}
+
+
+QPushButton#zamknij:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color: rgba(255, 38, 0, 255);
+	border-radius:7px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>291</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 12pt &quot;Futura&quot;;
+color: rgba(0,0, 0, 200)</string>
+   </property>
+   <property name="text">
+    <string>Witaj w programie OfficeHelper!
+
+Program ma na celu zapewnienie
+integracji katalogowania dokumentów 
+zarówno przychodzących jak 
+i wychodzących z twojej firmy! </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>321</x>
+     <y>160</y>
+     <width>640</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <stylestrategy>PreferAntialias</stylestrategy>
+     <hintingpreference>PreferFullHinting</hintingpreference>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color:rgba(255, 255, 255, 70);
+border-radius: 47px;
+border-bottom-left-radius: 0px;
+border-top-left-radius: -20px;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dodaj_user">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>440</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#dodaj_user{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(205, 180, 219), stop:1 rgb(189, 224, 254));
+	font: 500 16pt &quot;Futura&quot;;
+	color:rgba(10, 10, 10, 210);
+	border-radius:10px;
+}
+
+QPushButton#dodaj_user:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(215, 190, 229), stop:1 rgb(199, 234, 255));
+}
+
+QPushButton#dodaj_user:pressed{
+	padding-left:2px;
+	padding-top:2px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgb(185, 160, 199), stop:1 rgb(169, 204, 225));
+}</string>
+   </property>
+   <property name="text">
+    <string>Zarządzaj Dostępem</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tlo_dodaj_user">
+   <property name="geometry">
+    <rect>
+     <x>55</x>
+     <y>435</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0, 0, 0,10);
+color: rgb(0,0,0);
+border-radius:10px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>380</y>
+     <width>301</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 13pt &quot;Futura&quot;;
+color: orange</string>
+   </property>
+   <property name="text">
+    <string>Ta opcja zostanie dodana w kolejnej aktualizacji</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>370</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 13pt &quot;Futura&quot;;
+color: orange;
+background-color: rgba(100,100,100,200)</string>
+   </property>
+   <property name="text">
+    <string>Ta opcja zostanie dodana
+w kolejnej aktualizacji</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>tlo_biale_2</zorder>
+  <zorder>tlo_biale</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_6</zorder>
+  <zorder>rejestr</zorder>
+  <zorder>build</zorder>
+  <zorder>label_7</zorder>
+  <zorder>formularz</zorder>
+  <zorder>zalogowano</zorder>
+  <zorder>wyloguj</zorder>
+  <zorder>zamknij</zorder>
+  <zorder>label_5</zorder>
+  <zorder>tlo_dodaj_user</zorder>
+  <zorder>dodaj_user</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
