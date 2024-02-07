@@ -111,4 +111,3 @@ Jeśli masz pytania, sugestie lub chcesz zgłosić błędy, skontaktuj się ze m
 - Email: [maleckainez@gmail.com](mailto:maleckainez@gmail.com)
 - LinkedIn: [https://www.linkedin.com/in/inez-małecka/](https://www.linkedin.com/in/inez-małecka-828408226/)
 - GitHub: [github.com/maleckainez](https://github.com/maleckainez)
-
