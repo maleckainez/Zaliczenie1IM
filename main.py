@@ -80,7 +80,6 @@ class OknoLogowania(QWidget):  # Wszystkie komendy okna logowania
         wprowadzony_login = wprowadzony_login.lower()
         wprowadzone_haslo = self.haslo.text()
         wprowadzone_haslo_hash = hashlib.sha256(wprowadzone_haslo.encode()).hexdigest()
-        wprowadzone_haslo = wprowadzone_haslo_hash
         # Logowanie użytkownika z bazą danych
         with sqlite3.connect('program_files/databases/baza_danych_userow.db') as conn:
             cursor = conn.cursor()
@@ -295,8 +294,6 @@ class Okno_Panel_Administracyjny(QtWidgets.QDialog):
         nowy_user_login = nowy_user_login.lower()
         nowy_user_haslo = self.panel_administratora_input_haslo.text()
         nowy_user_haslo_hash = hashlib.sha256(nowy_user_haslo.encode()).hexdigest()
-        nowy_user_haslo = nowy_user_haslo_hash
-        nowy_user_imie = nowy_user_imie.lower()
         nowy_user_uprawnienia = self.panel_administratora_wybierz_uprawnienia.currentText()
         if nowy_user_imie and nowy_user_nazwisko and nowy_user_login and nowy_user_haslo:
             if nowy_user_uprawnienia.strip() in ["admin", "user"]:
@@ -369,6 +366,7 @@ class Okno_Panel_Administracyjny(QtWidgets.QDialog):
         try:
             wybrany_element = self.panel_administratora_show_users.selectedItems()
             nowy_login_usera = self.panel_administratora_input_zmien_login_usera.text()
+            nowy_login_usera = nowy_login_usera.lower()
 
             if len(wybrany_element) == 0:
                 self.panel_administratora_blad_zmien_login_usera.setText("Nie wybrano użytkownika")
@@ -383,6 +381,7 @@ class Okno_Panel_Administracyjny(QtWidgets.QDialog):
 
             if wybrany_element is not None:
                 login_do_zmiany = wybrany_element.text()
+                login_do_zmiany = login_do_zmiany.lower()
                 if login_do_zmiany:
                     with sqlite3.connect("program_files/databases/baza_danych_userow.db") as connection:
                         cursor = connection.cursor()
@@ -407,9 +406,6 @@ class Okno_Panel_Administracyjny(QtWidgets.QDialog):
             wybrany_element = self.panel_administratora_show_users.selectedItems()
             nowe_haslo_usera = self.panel_administratora_input_zmien_haslo_usera.text()
             nowe_haslo_usera_hash = hashlib.sha256(nowe_haslo_usera.encode()).hexdigest()
-            nowe_haslo_usera = nowe_haslo_usera_hash
-
-
 
             if len(wybrany_element) == 0:
                 self.panel_administratora_blad_zmien_haslo_usera.setText("Nie wybrano użytkownika")
