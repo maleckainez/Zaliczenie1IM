@@ -60,17 +60,20 @@ Aby korzystać z programu, wymagane są następujące zależności:
 
 ### Instalacja
 
-1. Sklonuj repozytorium na swój lokalny komputer:
+1. Sklonuj repozytorium na swój lokalny komputer lub rozpakuj archiwum .rar:
 
     ```bash
+    # Jeśli pobierasz z GitHub
     git clone https://github.com/maleckainez/Zaliczenie1IM.git
     ```
 
 2. Przejdź do katalogu projektu:
 
     ```bash
-   # Jeśli znajduje się  w folderze Library na MacOS
-    cd Library/Zaliczenie1IM-main
+    # Jeśli pobierasz z GitHub
+    cd <lokalizacja folderu>/Zaliczenie1IM-main
+    # Jeśli plik został wypakowany z archiwum .rar
+    cd <lokalizacja folderu>/Zaliczenie1IM
     ```
 
 3. Nie musisz instalować zależności, instalują się one przy rozruchu programu!
