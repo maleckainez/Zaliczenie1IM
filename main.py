@@ -17,30 +17,10 @@ from PyQt6.QtGui import QPixmap, QPainter, QImage
 # Poniżej, wszystkie potrzebne publiczne dane:
 wersja = "0.7.120 private"
 nazwa_firmy_global = "PRI Kępno ZUP-K"
-
 uprawnienia_lista = ["Użytkownik", "Administrator"]
 dostep = ""
 uprawnienia_administratora = False
 
-'''class PoczątkowaBazaDanych():
-    with sqlite3.connect("program_files/databases/baza_danych_userow.db") as connection:
-        cursor = connection.cursor()
-
-        create_table_query = """
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                login TEXT UNIQUE NOT NULL,
-                imie TEXT NOT NULL,
-                nazwisko TEXT NOT NULL,
-                haslo_hash TEXT NOT NULL,
-                uprawnienia TEXT NOT NULL
-            );
-            """
-        haslo_hash_poczatek = "admin"
-        haslo_hash_poczatek = hashlib.sha256(haslo_hash_poczatek.encode()).hexdigest()
-        cursor.execute(create_table_query)
-
-        connection.commit() '''
 def sprawdz_dostep_dekorator(sprawdzanie_dostepu):
     def wrapper(*args, **kwargs):
         if dostep == uprawnienia_lista[1]:
@@ -52,13 +32,11 @@ def sprawdz_dostep_dekorator(sprawdzanie_dostepu):
             print(f"Dekorator: {uprawnienia_administratora}")
             return sprawdzanie_dostepu(*args, uprawnienia_administratora, **kwargs)
     return wrapper
-
 def Generowanie_numeru():
     unikatowy_id = ''.join(random.choices('0123456789', k=10))
     dzisiejsza_data = datetime.now().strftime("%d%m%Y")
     KodKatalogowy_formularz = f"{unikatowy_id}-{dzisiejsza_data}"
     return KodKatalogowy_formularz
-
 class OknoLogowania(QWidget):  # Wszystkie komendy okna logowania
     def __init__(self):
         super().__init__()
@@ -104,7 +82,6 @@ class OknoLogowania(QWidget):  # Wszystkie komendy okna logowania
         self.close()
     def Zamknij(self):  # Definiuje sposób zamknięcia okna - wywołuje je kliknięcie przycisku zamknij
         self.close()  # Zamyka okno
-
 class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu aplikacji
     def __init__(self):
         super().__init__()
@@ -149,8 +126,6 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
         self.main_window = OknoLogowania()
         self.main_window.show()
         self.close()
-
-
 class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w formularzu
     def __init__(self):
         super().__init__()
@@ -163,29 +138,23 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         self.zamknij.clicked.connect(self.zamknij_okno)  # Definiuje zamknięcie okna po naciśnięciu przycisku
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)  # Again, chowa pasek
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)  # Again, chowa tło
-        self.drukuj.clicked.connect(
-            self.wydrukuj_kod)  # Wykorzystując odpowiednią bibliotekę frameworku, umożliwia wydrukowanie kodu
-
+        self.drukuj.clicked.connect(self.wydrukuj_kod)  # Wykorzystując odpowiednią bibliotekę frameworku, umożliwia wydrukowanie kodu
+        self.zapisz.clicked.connect(self.zapisz_rekord_rejestr) # Po kliknęciu w "zapisz" dane zapisywane sa w database
     def wydrukuj_kod(self):
         self.okno_drukowania_kodu = self.aplikacja_drukujaca()
-
-
     class aplikacja_drukujaca(QWidget):
         def __init__(self):
             super().__init__()
             self.printer = QPrinter(QPrinter.PrinterMode.HighResolution)
             self.otworz_kod_kreskowy()
-
         def otworz_kod_kreskowy(self):
             nazwa_pliku = "program_files/databases/temp_files/kod_kreskowy.png"  # Zawsze drukujemy ten plik
             self.image = QPixmap(nazwa_pliku)
             self.dialog_drukowania()
-
         def dialog_drukowania(self):
             dialog = QPrintDialog(self.printer, self)
             if dialog.exec() == QPrintDialog.DialogCode.Accepted:
                 self.operacja_drukowania()
-
         def operacja_drukowania(self):
             painter = QPainter(self.printer)
             rect = painter.viewport()
@@ -199,7 +168,6 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         wartosc_dpi = 400
         # tworzenie obrazka kodu kreskowego
         obrazek_kodu_kreskowego = code128.image(wartosc_kodu_kreskowego, height=100)
-
         # Tworzenie pustej podstawki na tekst i kod
         margines_gora_dol = 70
         pragines_prawa_lewa = 10
@@ -225,26 +193,23 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         draw.text((pragines_prawa_lewa, rozmiar_H1), data_utworzenia, fill=(0, 0, 0), font=font_H2)
         draw.text((pragines_prawa_lewa + 2, (rozmiar_H1 + rozmiar_H2 + 5)), pracownik_tworzacy, fill=(0, 0, 0), font=font_H3)
         draw.text((wycentruj_wartosc_kodu_kreskowego, (nowe_h - rozmiar_H4 - 15)), wartosc_kodu_kreskowego, fill=(0, 0, 0), font=font_H1)
-
         # wklej kod kreskowy na nowy obraz z tekstem
         nowy_obrazek.paste(obrazek_kodu_kreskowego, (0, 80))
         print(wartosc_kodu_kreskowego)
-
         # save in file
         nowy_obrazek.save('program_files/databases/kod_kreskowy.png', 'PNG', dpi=(wartosc_dpi, wartosc_dpi))
     def wczytaj_obrazek_kodu(self):
         kodzik_kreskowy = QPixmap('program_files/databases/kod_kreskowy.png')
-
         # Sprawdzenie czy obraz został wczytany poprawnie
         if not kodzik_kreskowy.isNull():
             self.kod_kreskowy.setPixmap(kodzik_kreskowy)  # Ustawienie obrazu w etykiecie
             self.kod_kreskowy.setScaledContents(True)  # Dopuszczenie skalowania zawartości etykiety
-
         self.show()
-
     def zamknij_okno(self):  # Again, definiuje zamknięcie okna
         self.close()
         os.remove('program_files/databases/kod_kreskowy.png')
+    def zapisz_rekord_rejestr(self):
+
 class Okno_Panel_Administracyjny(QtWidgets.QDialog):
     def __init__(self):
         super().__init__()
@@ -435,9 +400,7 @@ class Okno_Panel_Administracyjny(QtWidgets.QDialog):
             print("Błąd:", e)
         self.odswiez_liste_istniejacych()
 
-
 app = QtWidgets.QApplication(sys.argv)
 window = OknoLogowania()  # Definiuje że pierwszym otwartym oknem będzie okno logowania
-# window = OknoGlowne()  #Otwiera natychmiastowo stronę główną z niepełnymi danymi i zepsutą kolejnością zdarzeń
 window.show()
 app.exec()
