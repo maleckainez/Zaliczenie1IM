@@ -8,7 +8,7 @@ import sqlite3  # Import umożliwiający integrację baz danych w sqlite
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtCore import Qt, QTimer
 from PyQt6.QtPrintSupport import QPrinter, QPrintDialog, QPrintEngine, QPrintPreviewDialog
-from PyQt6.QtWidgets import QWidget, QTableWidget, QTableWidgetItem
+from PyQt6.QtWidgets import QWidget, QTableWidget, QTableWidgetItem, QMessageBox
 import code128
 import io
 from PIL import Image, ImageDraw, ImageFont
@@ -126,6 +126,31 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
         self.main_window = OknoLogowania()
         self.main_window.show()
         self.close()
+    def odswiez_liste_istniejacych(self):
+        with sqlite3.connect("program_files/databases/baza_danych_userow.db") as connection:
+            cursor = connection.cursor()
+            self.panel_administratora_show_users.clear()
+            self.cursor.execute("SELECT dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy FROM rejestr")
+            istniejacy_uzytkownicy = self.cursor.fetchall()
+
+        # Ustawienie liczby wierszy i kolumn
+            self.panel_administratora_show_users.setRowCount(len(istniejacy_uzytkownicy))
+            self.panel_administratora_show_users.setColumnCount(5)
+            self.panel_administratora_show_users.verticalHeader().setVisible(False)
+
+        # Ustawienie nagłówków kolumn
+            self.panel_administratora_show_users.setHorizontalHeaderLabels(
+            ["Login", "Imię", "Nazwisko", "Haslo", "Uprawnienia"])
+
+        # Ustawienie właściwości tabeli
+            self.panel_administratora_show_users.setShowGrid(False)  # Usunięcie linii siatki
+            self.panel_administratora_show_users.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)  # Zaznaczanie całych wierszy
+
+        # Wypełnienie tabeli danymi
+            for row_idx, uzytkownik in enumerate(istniejacy_uzytkownicy):
+                for col_idx, value in enumerate(uzytkownik):
+                    item = QTableWidgetItem(str(value))
+                    self.panel_administratora_show_users.setItem(row_idx, col_idx, item)
 class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w formularzu
     def __init__(self):
         super().__init__()
@@ -209,6 +234,7 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         self.close()
         os.remove('program_files/databases/kod_kreskowy.png')
     def zapisz_rekord_rejestr(self):
+        dodajacy = dane_usera
         rodzajDokumentu = self.rodzajDokumentu.currentText()
         nrwewn = self.nrwewn.text()
         nadawca = self.nadawca.text()
@@ -220,17 +246,18 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         try:
             connection = sqlite3.connect('program_files/databases/baza_danych_userow.db')
             cursor = connection.cursor()
-            rejestr_query = "INSERT INTO rejestr (rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?);"
-            cursor.execute(rejestr_query, (rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi, indywidualny_numer))
+            rejestr_query = "INSERT INTO rejestr ( dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?, ?);"
+            cursor.execute(rejestr_query, (dodajacy, rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi, indywidualny_numer))
             connection.commit()
             connection.close()
             print("Datos rejestrados")
+            popup = QMessageBox()
+            popup.setWindowTitle("Pomyślnie dodano!")
+            popup.setText("Pomyślnie dodano dokument do Rejestru")
+            popup.exec()
         except Exception as e:
             print(e)
             connection.close()
-
-
-
 class Okno_Panel_Administracyjny(QtWidgets.QDialog):
     def __init__(self):
         super().__init__()

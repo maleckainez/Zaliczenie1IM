@@ -498,6 +498,29 @@ QPushButton#lista_zadan:pressed{
     <string>Lista Zadań</string>
    </property>
   </widget>
+  <widget class="QTableWidget" name="widok_rejestru">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>200</y>
+     <width>621</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255,255,255,10);
+QTableView::verticalLine { border: 0px; color: transparent; }</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
   <zorder>tlo_biale_2</zorder>
   <zorder>tlo_biale</zorder>
   <zorder>label_2</zorder>
@@ -518,6 +541,7 @@ QPushButton#lista_zadan:pressed{
   <zorder>label_8</zorder>
   <zorder>label_10</zorder>
   <zorder>lista_zadan</zorder>
+  <zorder>widok_rejestru</zorder>
  </widget>
  <resources/>
  <connections/>
