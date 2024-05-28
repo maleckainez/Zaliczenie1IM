@@ -511,7 +511,9 @@ QPushButton#lista_zadan:pressed{
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgba(255,255,255,10);
+    <string notr="true">font: 500 12pt &quot;Futura&quot;;
+color: rgba(0,0, 0, 200);
+background-color: rgba(255,255,255,10);
 QTableView::verticalLine { border: 0px; color: transparent; }</string>
    </property>
    <property name="frameShape">

@@ -1,4 +1,5 @@
 import os
+import time
 import sys  # Umożliwia pobranie danych z systemu
 import random  # Umożliwia generowanie losowych liczb dla kodów katalogowych
 from datetime import datetime  # Umożliwia pobranie daty z systemu-katalogowanie wejść do rejestru
@@ -99,6 +100,8 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
         self.zamknij.clicked.connect(self.zamknij_okno)  # Wciśnięcie czerwonego kółeczka zamyka aplikację
         self.wyloguj.clicked.connect(self.wyloguj_sie)  # Wciśnięcie przycisku przenosi go do okna logowania
         self.formularz.clicked.connect(self.otworz_formularz)  # Wciśnięcie przycisku formularz, pozwala go otworzyć
+        self.odswierz_rejestr()
+
 
 
     @sprawdz_dostep_dekorator
@@ -126,31 +129,39 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
         self.main_window = OknoLogowania()
         self.main_window.show()
         self.close()
-    def odswiez_liste_istniejacych(self):
+
+    def odswierz_rejestr(self):
         with sqlite3.connect("program_files/databases/baza_danych_userow.db") as connection:
             cursor = connection.cursor()
-            self.panel_administratora_show_users.clear()
-            self.cursor.execute("SELECT dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy FROM rejestr")
-            istniejacy_uzytkownicy = self.cursor.fetchall()
+            self.widok_rejestru.clear()
+            cursor.execute(
+                "SELECT dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy FROM rejestr")
+            daneRejestru = cursor.fetchall()
+            print("Polaczono")
 
         # Ustawienie liczby wierszy i kolumn
-            self.panel_administratora_show_users.setRowCount(len(istniejacy_uzytkownicy))
-            self.panel_administratora_show_users.setColumnCount(5)
-            self.panel_administratora_show_users.verticalHeader().setVisible(False)
+        self.widok_rejestru.setRowCount(len(daneRejestru))
+        self.widok_rejestru.setColumnCount(8)
+        self.widok_rejestru.verticalHeader().setVisible(True)
+        print("Ustawiono wiersze i kolumny")
 
         # Ustawienie nagłówków kolumn
-            self.panel_administratora_show_users.setHorizontalHeaderLabels(
-            ["Login", "Imię", "Nazwisko", "Haslo", "Uprawnienia"])
-
+        self.widok_rejestru.setHorizontalHeaderLabels(
+            ["Dodajacy", "Rodzaj", "Nr Wewn", "Nadawca", "Odbiorca", "Tytuł", "Opis", "Kod"])
+        print("Ustawiono tytuly")
         # Ustawienie właściwości tabeli
-            self.panel_administratora_show_users.setShowGrid(False)  # Usunięcie linii siatki
-            self.panel_administratora_show_users.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)  # Zaznaczanie całych wierszy
+        self.widok_rejestru.setShowGrid(True)  # Usunięcie linii siatki
+        self.widok_rejestru.setSelectionBehavior(
+            QTableWidget.SelectionBehavior.SelectRows)  # Zaznaczanie całych wierszy
 
         # Wypełnienie tabeli danymi
-            for row_idx, uzytkownik in enumerate(istniejacy_uzytkownicy):
-                for col_idx, value in enumerate(uzytkownik):
-                    item = QTableWidgetItem(str(value))
-                    self.panel_administratora_show_users.setItem(row_idx, col_idx, item)
+        for row_idx, entry in enumerate(daneRejestru):
+            for col_idx, value in enumerate(entry):
+                item = QTableWidgetItem(str(value))
+                self.widok_rejestru.setItem(row_idx, col_idx, item)
+                print("uzupelniono")
+
+
 class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w formularzu
     def __init__(self):
         super().__init__()
