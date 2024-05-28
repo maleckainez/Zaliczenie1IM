@@ -21,7 +21,8 @@ nazwa_firmy_global = "PRI Kępno ZUP-K"
 uprawnienia_lista = ["Użytkownik", "Administrator"]
 dostep = ""
 uprawnienia_administratora = False
-class PoczątkowaBazaDanych():
+
+'''class PoczątkowaBazaDanych():
     with sqlite3.connect("program_files/databases/baza_danych_userow.db") as connection:
         cursor = connection.cursor()
 
@@ -39,7 +40,7 @@ class PoczątkowaBazaDanych():
         haslo_hash_poczatek = hashlib.sha256(haslo_hash_poczatek.encode()).hexdigest()
         cursor.execute(create_table_query)
 
-        connection.commit()
+        connection.commit() '''
 def sprawdz_dostep_dekorator(sprawdzanie_dostepu):
     def wrapper(*args, **kwargs):
         if dostep == uprawnienia_lista[1]:
