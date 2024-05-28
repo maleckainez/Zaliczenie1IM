@@ -139,7 +139,7 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)  # Again, chowa pasek
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)  # Again, chowa tło
         self.drukuj.clicked.connect(self.wydrukuj_kod)  # Wykorzystując odpowiednią bibliotekę frameworku, umożliwia wydrukowanie kodu
-        self.zapisz.clicked.connect(self.zapisz_rekord_rejestr) # Po kliknęciu w "zapisz" dane zapisywane sa w database
+        self.zatwierdz.clicked.connect(self.zapisz_rekord_rejestr) # Po kliknęciu w "zapisz" dane zapisywane sa w database
     def wydrukuj_kod(self):
         self.okno_drukowania_kodu = self.aplikacja_drukujaca()
     class aplikacja_drukujaca(QWidget):
@@ -209,6 +209,21 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         self.close()
         os.remove('program_files/databases/kod_kreskowy.png')
     def zapisz_rekord_rejestr(self):
+        rodzajDokumentu = self.rodzajDokumentu.currentText()
+        nrwewn = self.nrwewn.text()
+        nadawca = self.nadawca.text()
+        odbiorca = self.odbiorca.text()
+        tytul = self.tytul.text()
+        uwagi = self.uwagi.toPlainText()
+        indywidualny_numer = self.indywidualny_numer
+        try:
+            self.connection = sqlite3.connect('program_files/databases/baza_danych_userow.db')
+            self.cursor = self.connection.cursor()
+            rejestr_query = "INSERT INTO rejestr (rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?);"
+            cursor.execute(rejestr_query, (rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi, indywidualny_numer))
+        except Exception as e:
+            return e
+
 
 class Okno_Panel_Administracyjny(QtWidgets.QDialog):
     def __init__(self):

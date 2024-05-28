@@ -1,8 +1,12 @@
 import sqlite3
 import hashlib
-with sqlite3.connect("../program_files/databases/testowe.db") as connection:
+with sqlite3.connect("/Users/inezmalecka/Desktop/Studiowanie/Zaliczenie1IM/program_files/databases/baza_danych_userow.db") as connection:
     cursor = connection.cursor()
+#    drop_table = "DROP TABLE IF EXISTS rejestr"
+#    cursor.execute(drop_table)
+#    connection.commit()
 
+'''
     create_table_query = """
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -38,3 +42,16 @@ with sqlite3.connect("../program_files/databases/testowe.db") as connection:
 
     connection.commit()
 
+def dodawanierejestru():
+    rodzajDokumentu = self.rodzajDokumentu.text()
+    nrwewn = self.nrwewn.text()
+    nadawca = self.nadawca.text()
+    odbiorca = self.odbiorca.text()
+    tytul = self.tytul.text()
+    uwagi = self.uwagi.text()
+    indywidualny_numer = self.indywidualny_numer
+    with sqlite3.connect('program_files/databases/baza_danych_userow.db') as connection:
+        cursor = connection.cursor()
+        rejestr_query = "INSERT INTO rejestr (rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?);"
+        cursor.execute(rejestr_query, (rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi, indywidualny_numer))
+'''

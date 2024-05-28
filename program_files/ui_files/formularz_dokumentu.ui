@@ -92,7 +92,7 @@ QPushButton#zamknij{
     <string>Anuluj</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="login">
+  <widget class="QLineEdit" name="nrwewn">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -128,7 +128,7 @@ font: 500 12pt &quot;Futura&quot;;
     <string>Numer wewnętrzny dokumentu</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="rodzajDokumentu">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -185,7 +185,7 @@ color: rgba(0, 0, 0, 40)</string>
     <string>Jeżeli nie posiada, okno pozostaw puste</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="login_2">
+  <widget class="QLineEdit" name="nadawca">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -220,7 +220,7 @@ font: 500 12pt &quot;Futura&quot;;</string>
     <string>Nadawca/ Autor dokumentu</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="login_3">
+  <widget class="QLineEdit" name="odbiorca">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -255,7 +255,7 @@ font: 500 12pt &quot;Futura&quot;;</string>
     <string>Odbiorca dokumentu</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="login_4">
+  <widget class="QLineEdit" name="tytul">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -458,12 +458,12 @@ KOD KRESKOWY</string>
   <zorder>okno_biale</zorder>
   <zorder>text1</zorder>
   <zorder>zamknij</zorder>
-  <zorder>login</zorder>
-  <zorder>comboBox</zorder>
+  <zorder>nrwewn</zorder>
+  <zorder>rodzajDokumentu</zorder>
   <zorder>text1_2</zorder>
-  <zorder>login_2</zorder>
-  <zorder>login_3</zorder>
-  <zorder>login_4</zorder>
+  <zorder>nadawca</zorder>
+  <zorder>odbiorca</zorder>
+  <zorder>tytul</zorder>
   <zorder>uwagi</zorder>
   <zorder>text1_3</zorder>
   <zorder>kod_katalogowy</zorder>
