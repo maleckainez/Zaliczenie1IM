@@ -14,7 +14,6 @@ import io
 from PIL import Image, ImageDraw, ImageFont
 from PyQt6.QtGui import QPixmap, QPainter, QImage
 
-
 # Poniżej, wszystkie potrzebne publiczne dane:
 wersja = "0.7.120 private"
 nazwa_firmy_global = "PRI Kępno ZUP-K"
@@ -58,7 +57,6 @@ def Generowanie_numeru():
     dzisiejsza_data = datetime.now().strftime("%d%m%Y")
     KodKatalogowy_formularz = f"{unikatowy_id}-{dzisiejsza_data}"
     return KodKatalogowy_formularz
-
 
 class OknoLogowania(QWidget):  # Wszystkie komendy okna logowania
     def __init__(self):
@@ -105,7 +103,6 @@ class OknoLogowania(QWidget):  # Wszystkie komendy okna logowania
         self.close()
     def Zamknij(self):  # Definiuje sposób zamknięcia okna - wywołuje je kliknięcie przycisku zamknij
         self.close()  # Zamyka okno
-
 
 class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu aplikacji
     def __init__(self):
@@ -246,7 +243,7 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
 
     def zamknij_okno(self):  # Again, definiuje zamknięcie okna
         self.close()
-        os.remove('program_files/databases/temp_files/kod_kreskowy.png')
+        os.remove('program_files/databases/kod_kreskowy.png')
 class Okno_Panel_Administracyjny(QtWidgets.QDialog):
     def __init__(self):
         super().__init__()
