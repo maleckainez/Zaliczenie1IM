@@ -198,7 +198,7 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
             painter.drawImage(0, 0, self.image.toImage())
     def generuj_kod_kreskowy(self):
         wartosc_kodu_kreskowego = self.indywidualny_numer
-        wartosc_dpi = 2400
+        wartosc_dpi = 400
         # tworzenie obrazka kodu kreskowego
         obrazek_kodu_kreskowego = code128.image(wartosc_kodu_kreskowego, height=100)
 
@@ -233,9 +233,9 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         print(wartosc_kodu_kreskowego)
 
         # save in file
-        nowy_obrazek.save('program_files/databases/temp_files/kod_kreskowy.png', 'PNG', dpi=(wartosc_dpi, wartosc_dpi))
+        nowy_obrazek.save('program_files/databases/kod_kreskowy.png', 'PNG', dpi=(wartosc_dpi, wartosc_dpi))
     def wczytaj_obrazek_kodu(self):
-        kodzik_kreskowy = QPixmap('program_files/databases/temp_files/kod_kreskowy.png')
+        kodzik_kreskowy = QPixmap('program_files/databases/kod_kreskowy.png')
 
         # Sprawdzenie czy obraz został wczytany poprawnie
         if not kodzik_kreskowy.isNull():
