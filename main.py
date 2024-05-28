@@ -216,13 +216,19 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         tytul = self.tytul.text()
         uwagi = self.uwagi.toPlainText()
         indywidualny_numer = self.indywidualny_numer
+        print(f"{rodzajDokumentu}, {nrwewn}, {nadawca}, {odbiorca}, {tytul}, {uwagi}, {indywidualny_numer}")
         try:
-            self.connection = sqlite3.connect('program_files/databases/baza_danych_userow.db')
-            self.cursor = self.connection.cursor()
+            connection = sqlite3.connect('program_files/databases/baza_danych_userow.db')
+            cursor = connection.cursor()
             rejestr_query = "INSERT INTO rejestr (rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?);"
             cursor.execute(rejestr_query, (rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi, indywidualny_numer))
+            connection.commit()
+            connection.close()
+            print("Datos rejestrados")
         except Exception as e:
-            return e
+            print(e)
+            connection.close()
+
 
 
 class Okno_Panel_Administracyjny(QtWidgets.QDialog):
