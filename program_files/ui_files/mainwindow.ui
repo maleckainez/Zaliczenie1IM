@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>972</width>
-    <height>680</height>
+    <width>1179</width>
+    <height>724</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>10</x>
      <y>10</y>
      <width>311</width>
-     <height>650</height>
+     <height>711</height>
     </rect>
    </property>
    <property name="font">
@@ -128,7 +128,7 @@ QPushButton#formularz:pressed{
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>210</y>
+     <y>220</y>
      <width>211</width>
      <height>31</height>
     </rect>
@@ -163,7 +163,7 @@ border-radius:10px;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>600</y>
+     <y>660</y>
      <width>291</width>
      <height>50</height>
     </rect>
@@ -193,7 +193,7 @@ Build {wersja}</string>
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>510</y>
+     <y>570</y>
      <width>241</width>
      <height>41</height>
     </rect>
@@ -214,7 +214,7 @@ Uprawnienia użytkownika: {uprawnienia}</string>
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>560</y>
+     <y>620</y>
      <width>211</width>
      <height>31</height>
     </rect>
@@ -262,7 +262,7 @@ border-radius:10px;</string>
      <x>20</x>
      <y>20</y>
      <width>291</width>
-     <height>631</height>
+     <height>691</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -281,8 +281,8 @@ border-radius: 45px;</string>
     <rect>
      <x>330</x>
      <y>170</y>
-     <width>621</width>
-     <height>481</height>
+     <width>831</width>
+     <height>541</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -329,7 +329,7 @@ QPushButton#zamknij:pressed{
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>70</y>
+     <y>50</y>
      <width>291</width>
      <height>151</height>
     </rect>
@@ -355,8 +355,8 @@ i wychodzących z twojej firmy! </string>
     <rect>
      <x>321</x>
      <y>160</y>
-     <width>640</width>
-     <height>500</height>
+     <width>851</width>
+     <height>561</height>
     </rect>
    </property>
    <property name="font">
@@ -432,23 +432,6 @@ border-radius:10px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>380</y>
-     <width>301</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 500 13pt &quot;Futura&quot;;
-color: orange</string>
-   </property>
-   <property name="text">
-    <string>Ta opcja zostanie dodana w kolejnej aktualizacji</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
@@ -501,10 +484,10 @@ QPushButton#lista_zadan:pressed{
   <widget class="QTableWidget" name="widok_rejestru">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>200</y>
-     <width>621</width>
-     <height>411</height>
+     <x>340</x>
+     <y>220</y>
+     <width>811</width>
+     <height>471</height>
     </rect>
    </property>
    <property name="autoFillBackground">
@@ -540,7 +523,6 @@ QTableView::verticalLine { border: 0px; color: transparent; }</string>
   <zorder>label_5</zorder>
   <zorder>tlo_dodaj_user</zorder>
   <zorder>dodaj_user</zorder>
-  <zorder>label_8</zorder>
   <zorder>label_10</zorder>
   <zorder>lista_zadan</zorder>
   <zorder>widok_rejestru</zorder>

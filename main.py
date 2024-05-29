@@ -101,7 +101,9 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
         self.wyloguj.clicked.connect(self.wyloguj_sie)  # Wciśnięcie przycisku przenosi go do okna logowania
         self.formularz.clicked.connect(self.otworz_formularz)  # Wciśnięcie przycisku formularz, pozwala go otworzyć
         self.odswierz_rejestr()
-
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.odswierz_rejestr)
+        self.timer.start(5000)  # Odświeżanie co 5 sekund
 
 
     @sprawdz_dostep_dekorator
@@ -142,7 +144,7 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
         # Ustawienie liczby wierszy i kolumn
         self.widok_rejestru.setRowCount(len(daneRejestru))
         self.widok_rejestru.setColumnCount(8)
-        self.widok_rejestru.verticalHeader().setVisible(True)
+        self.widok_rejestru.verticalHeader().setVisible(False)
         print("Ustawiono wiersze i kolumny")
 
         # Ustawienie nagłówków kolumn
@@ -150,7 +152,7 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
             ["Dodajacy", "Rodzaj", "Nr Wewn", "Nadawca", "Odbiorca", "Tytuł", "Opis", "Kod"])
         print("Ustawiono tytuly")
         # Ustawienie właściwości tabeli
-        self.widok_rejestru.setShowGrid(True)  # Usunięcie linii siatki
+        self.widok_rejestru.setShowGrid(False)  # Usunięcie linii siatki
         self.widok_rejestru.setSelectionBehavior(
             QTableWidget.SelectionBehavior.SelectRows)  # Zaznaczanie całych wierszy
 
