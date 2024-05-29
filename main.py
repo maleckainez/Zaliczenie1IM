@@ -33,11 +33,32 @@ def sprawdz_dostep_dekorator(sprawdzanie_dostepu):
             print(f"Dekorator: {uprawnienia_administratora}")
             return sprawdzanie_dostepu(*args, uprawnienia_administratora, **kwargs)
     return wrapper
+
+
+import sqlite3
+import random
+from datetime import datetime
+
+
 def Generowanie_numeru():
-    unikatowy_id = ''.join(random.choices('0123456789', k=10))
-    dzisiejsza_data = datetime.now().strftime("%d%m%Y")
-    KodKatalogowy_formularz = f"{unikatowy_id}-{dzisiejsza_data}"
-    return KodKatalogowy_formularz
+    def czy_kod_jest_unikalny(kod, istniejące_kody):
+        return kod not in istniejące_kody
+
+    # Połączenie z bazą danych i pobranie istniejących kodów
+    with sqlite3.connect('program_files/databases/baza_danych_userow.db') as connection:
+        cursor = connection.cursor()
+        cursor.execute("SELECT kod_katalogowy FROM rejestr")
+        istniejące_kody = {row[0] for row in cursor.fetchall()}
+
+    while True:
+        unikatowy_id = ''.join(random.choices('0123456789', k=10))
+        dzisiejsza_data = datetime.now().strftime("%d%m%Y")
+        KodKatalogowy_formularz = f"{unikatowy_id}-{dzisiejsza_data}"
+
+        if czy_kod_jest_unikalny(KodKatalogowy_formularz, istniejące_kody):
+            return KodKatalogowy_formularz
+
+
 class OknoLogowania(QWidget):  # Wszystkie komendy okna logowania
     def __init__(self):
         super().__init__()
@@ -244,6 +265,11 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
     def zamknij_okno(self):  # Again, definiuje zamknięcie okna
         self.close()
         os.remove('program_files/databases/kod_kreskowy.png')
+    def popup(self, tytul,tresc):
+        popup = QMessageBox()
+        popup.setWindowTitle(tytul)
+        popup.setText(tresc)
+        popup.exec()
     def zapisz_rekord_rejestr(self):
         data = datetime.now().strftime("%d/%m/%Y")
         dodajacy = dane_usera
@@ -254,26 +280,28 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         tytul = self.tytul.text()
         uwagi = self.uwagi.toPlainText()
         indywidualny_numer = self.indywidualny_numer
-        print(f"{data}, {rodzajDokumentu}, {nrwewn}, {nadawca}, {odbiorca}, {tytul}, {uwagi}, {indywidualny_numer}")
-        try:
-            connection = sqlite3.connect('program_files/databases/baza_danych_userow.db')
-            cursor = connection.cursor()
-            rejestr_query = "INSERT INTO rejestr (data, dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);"
-            cursor.execute(rejestr_query, (data, dodajacy, rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi, indywidualny_numer))
-            connection.commit()
-            connection.close()
-            print("Datos rejestrados")
-            popup = QMessageBox()
-            popup.setWindowTitle("Pomyślnie dodano!")
-            popup.setText("Pomyślnie dodano dokument do Rejestru")
-            popup.exec()
-        except Exception as e:
-            print(e)
-            popup = QMessageBox()
-            popup.setWindowTitle("Wystąpił błąd!")
-            popup.setText(f"{e}")
-            popup.exec()
-            connection.close()
+        if data and dodajacy and rodzajDokumentu and tytul:
+            if rodzajDokumentu != "Wybierz rodzaj dokumentu":
+                try:
+                    connection = sqlite3.connect('program_files/databases/baza_danych_userow.db')
+                    cursor = connection.cursor()
+                    rejestr_query = "INSERT INTO rejestr (data, dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);"
+                    cursor.execute(rejestr_query,
+                                   (data, dodajacy, rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi,
+                                    indywidualny_numer))
+                    connection.commit()
+                    connection.close()
+                    print("Datos rejestrados")
+                    self.popup("Udało się!", "Dokument pomyślnie został dodany do rejestru!")
+                except Exception as e:
+                    print(e)
+                    self.popup("Wystąpił błąd!", f"{e}")
+                    connection.close()
+            else:
+                self.popup("Błąd!", "Nie wybrano rodzaju dokumentu")
+        else:
+            self.popup("Błąd!", "Nie uzupełniono niezbędnych danych")
+
 class Okno_Panel_Administracyjny(QtWidgets.QDialog):
     def __init__(self):
         super().__init__()
