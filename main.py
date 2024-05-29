@@ -137,19 +137,19 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
             cursor = connection.cursor()
             self.widok_rejestru.clear()
             cursor.execute(
-                "SELECT dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy FROM rejestr")
+                "SELECT data, dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy FROM rejestr ORDER BY id DESC")
             daneRejestru = cursor.fetchall()
             print("Polaczono")
 
         # Ustawienie liczby wierszy i kolumn
         self.widok_rejestru.setRowCount(len(daneRejestru))
-        self.widok_rejestru.setColumnCount(8)
+        self.widok_rejestru.setColumnCount(9)
         self.widok_rejestru.verticalHeader().setVisible(False)
         print("Ustawiono wiersze i kolumny")
 
         # Ustawienie nagłówków kolumn
         self.widok_rejestru.setHorizontalHeaderLabels(
-            ["Dodajacy", "Rodzaj", "Nr Wewn", "Nadawca", "Odbiorca", "Tytuł", "Opis", "Kod"])
+            ["Data","Dodajacy", "Rodzaj", "Nr Wewn", "Nadawca", "Odbiorca", "Tytuł", "Opis", "Kod"])
         print("Ustawiono tytuly")
         # Ustawienie właściwości tabeli
         self.widok_rejestru.setShowGrid(False)  # Usunięcie linii siatki
@@ -162,8 +162,6 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
                 item = QTableWidgetItem(str(value))
                 self.widok_rejestru.setItem(row_idx, col_idx, item)
                 print("uzupelniono")
-
-
 class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w formularzu
     def __init__(self):
         super().__init__()
@@ -247,6 +245,7 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         self.close()
         os.remove('program_files/databases/kod_kreskowy.png')
     def zapisz_rekord_rejestr(self):
+        data = datetime.now().strftime("%d/%m/%Y")
         dodajacy = dane_usera
         rodzajDokumentu = self.rodzajDokumentu.currentText()
         nrwewn = self.nrwewn.text()
@@ -255,12 +254,12 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         tytul = self.tytul.text()
         uwagi = self.uwagi.toPlainText()
         indywidualny_numer = self.indywidualny_numer
-        print(f"{rodzajDokumentu}, {nrwewn}, {nadawca}, {odbiorca}, {tytul}, {uwagi}, {indywidualny_numer}")
+        print(f"{data}, {rodzajDokumentu}, {nrwewn}, {nadawca}, {odbiorca}, {tytul}, {uwagi}, {indywidualny_numer}")
         try:
             connection = sqlite3.connect('program_files/databases/baza_danych_userow.db')
             cursor = connection.cursor()
-            rejestr_query = "INSERT INTO rejestr ( dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?, ?);"
-            cursor.execute(rejestr_query, (dodajacy, rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi, indywidualny_numer))
+            rejestr_query = "INSERT INTO rejestr (data, dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);"
+            cursor.execute(rejestr_query, (data, dodajacy, rodzajDokumentu, nrwewn, nadawca, odbiorca, tytul, uwagi, indywidualny_numer))
             connection.commit()
             connection.close()
             print("Datos rejestrados")
@@ -270,6 +269,10 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
             popup.exec()
         except Exception as e:
             print(e)
+            popup = QMessageBox()
+            popup.setWindowTitle("Wystąpił błąd!")
+            popup.setText(f"{e}")
+            popup.exec()
             connection.close()
 class Okno_Panel_Administracyjny(QtWidgets.QDialog):
     def __init__(self):

@@ -30,6 +30,7 @@ with sqlite3.connect("/Users/inezmalecka/Desktop/Studiowanie/Zaliczenie1IM/progr
     create_table_query = """
         CREATE TABLE IF NOT EXISTS rejestr (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+            data TEXT NOT NULL,
             dodajacy TEXT NOT NULL,
             rodzaj_dokumentu TEXT NOT NULL,
             nr_wewnetrzny TEXT,
