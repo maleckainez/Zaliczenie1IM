@@ -26,11 +26,9 @@ def sprawdz_dostep_dekorator(sprawdzanie_dostepu):
     def wrapper(*args, **kwargs):
         if dostep == uprawnienia_lista[1]:
             uprawnienia_administratora = True
-            print(f"Dekorator: {uprawnienia_administratora}")
             return sprawdzanie_dostepu(*args, uprawnienia_administratora, **kwargs)
         else:
             uprawnienia_administratora = False
-            print(f"Dekorator: {uprawnienia_administratora}")
             return sprawdzanie_dostepu(*args, uprawnienia_administratora, **kwargs)
     return wrapper
 
@@ -129,12 +127,10 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
 
     @sprawdz_dostep_dekorator
     def przycisk_dodawania(self, uprawnienia_administratora):
-        print(f"zadziałała cz0, uprawnienia {uprawnienia_administratora}")
         if uprawnienia_administratora:
             self.dodaj_user.setVisible(True)
             self.dodaj_user.setEnabled(True)
             self.tlo_dodaj_user.setVisible(True)
-            print(f"uprawnienia administratora {uprawnienia_administratora}")
         else:
             self.dodaj_user.setVisible(False)
             self.dodaj_user.setEnabled(False)
@@ -160,18 +156,15 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
             cursor.execute(
                 "SELECT data, dodajacy, rodzaj_dokumentu, nr_wewnetrzny, nadawca_dokumentu, odbiorca_dokumentu, tytul_pisma, krotki_opis, kod_katalogowy FROM rejestr ORDER BY id DESC")
             daneRejestru = cursor.fetchall()
-            print("Polaczono")
 
         # Ustawienie liczby wierszy i kolumn
         self.widok_rejestru.setRowCount(len(daneRejestru))
         self.widok_rejestru.setColumnCount(9)
         self.widok_rejestru.verticalHeader().setVisible(False)
-        print("Ustawiono wiersze i kolumny")
 
         # Ustawienie nagłówków kolumn
         self.widok_rejestru.setHorizontalHeaderLabels(
             ["Data","Dodajacy", "Rodzaj", "Nr Wewn", "Nadawca", "Odbiorca", "Tytuł", "Opis", "Kod"])
-        print("Ustawiono tytuly")
         # Ustawienie właściwości tabeli
         self.widok_rejestru.setShowGrid(False)  # Usunięcie linii siatki
         self.widok_rejestru.setSelectionBehavior(
@@ -182,7 +175,6 @@ class OknoGlowne(QWidget):  # Definiuje wszystkie komenty głównego ekranu apli
             for col_idx, value in enumerate(entry):
                 item = QTableWidgetItem(str(value))
                 self.widok_rejestru.setItem(row_idx, col_idx, item)
-                print("uzupelniono")
 class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w formularzu
     def __init__(self):
         super().__init__()
@@ -252,7 +244,6 @@ class FormularzDokumentu(QtWidgets.QDialog):  # Definiuje wszyskie komendy w for
         draw.text((wycentruj_wartosc_kodu_kreskowego, (nowe_h - rozmiar_H4 - 15)), wartosc_kodu_kreskowego, fill=(0, 0, 0), font=font_H1)
         # wklej kod kreskowy na nowy obraz z tekstem
         nowy_obrazek.paste(obrazek_kodu_kreskowego, (0, 80))
-        print(wartosc_kodu_kreskowego)
         # save in file
         nowy_obrazek.save('program_files/databases/kod_kreskowy.png', 'PNG', dpi=(wartosc_dpi, wartosc_dpi))
     def wczytaj_obrazek_kodu(self):

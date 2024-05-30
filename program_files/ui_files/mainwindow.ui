@@ -623,7 +623,6 @@ QPushButton#wiadomosci:pressed{
   <zorder>formularz</zorder>
   <zorder>zalogowano</zorder>
   <zorder>wyloguj</zorder>
-  <zorder>zamknij</zorder>
   <zorder>label_5</zorder>
   <zorder>tlo_dodaj_user</zorder>
   <zorder>dodaj_user</zorder>
@@ -634,6 +633,7 @@ QPushButton#wiadomosci:pressed{
   <zorder>poczta</zorder>
   <zorder>label_12</zorder>
   <zorder>wiadomosci</zorder>
+  <zorder>zamknij</zorder>
  </widget>
  <resources/>
  <connections/>
