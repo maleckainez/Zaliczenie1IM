@@ -395,16 +395,30 @@ class Okno_Panel_Administracyjny(QtWidgets.QDialog):
                 cursor = connection.cursor()
                 # Pobranie identyfikatora użytkownika na podstawie wszystkich dostępnych danych
                 cursor.execute(
-                    "SELECT id FROM users WHERE login = ? AND imie = ? AND nazwisko = ? AND haslo_hash = ? AND uprawnienia = ?",
+                    "SELECT id, uprawnienia FROM users WHERE login = ? AND imie = ? AND nazwisko = ? AND haslo_hash = ? AND uprawnienia = ?",
                     tuple(dane_do_usuniecia))
                 row = cursor.fetchone()
+                print(row)
+                cursor.execute("SELECT COUNT(login) FROM users WHERE uprawnienia = 'admin'")
+                ilosc_userow = cursor.fetchone()[0]
+                print(ilosc_userow)
                 if row:
-                    id_uzytkownika = row[0]
-                    # Usunięcie użytkownika na podstawie jego identyfikatora
-                    cursor.execute("DELETE FROM users WHERE id = ?", (id_uzytkownika,))
-                    connection.commit()
+                    if ilosc_userow != 1 and row[1] == "admin":
+                        id_uzytkownika = row[0]
+                        # Usunięcie użytkownika na podstawie jego identyfikatora
+                        cursor.execute("DELETE FROM users WHERE id = ?", (id_uzytkownika,))
+                        connection.commit()
+                    elif row[1] == "user":
+                        id_uzytkownika = row[0]
+                        # Usunięcie użytkownika na podstawie jego identyfikatora
+                        cursor.execute("DELETE FROM users WHERE id = ?", (id_uzytkownika,))
+                        connection.commit()
+                    else:
+                        popup = FormularzDokumentu.popup
+                        popup(self, "Błąd!","Nie można usunąć jedynego administratora.")
+                        pass
             except:
-             pass
+                pass
         self.odswiez_liste_istniejacych()
 
 
