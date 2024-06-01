@@ -3,6 +3,7 @@ import subprocess
 import sys
 import platform
 
+
 if platform.system() != 'Darwin':
     raise SystemError('Ten skrypt musi być uruchomiony na systemie MacOS')
 
@@ -17,9 +18,14 @@ def zainstaluj_biblioteki():
     else:
         print(f"Plik {requirements_txt} nie istnieje.")
 
+
 if __name__ == "__main__":
     zainstaluj_biblioteki()
 
+    if not os.path.exists('program_files/databases/baza_danych_userow.db'):
+        from program_files.databases import DatabaseWork
+        bazadanych = DatabaseWork
+        bazadanych
     # Importuj moduł main
     import main
     main
