@@ -1,6 +1,6 @@
 # Projekt Python - INEZ MAŁECKA
 
-> Niniejszy projekt został wykonany na zaliczenie pierwszego semestru studiów niestacjonarnych na kierunku INFORMATYKA na Uniwersytecie DSW, przez studenta CYPRIAN MAŁECKI o numerze indeksu 52738
+> Niniejszy projekt został wykonany na zaliczenie pierwszego semestru studiów niestacjonarnych na kierunku INFORMATYKA na Uniwersytecie DSW, przez studentkę Inez Małecka o numerze indeksu 52738
 
 ## Spis Treści
 * [Informacje Ogólne](#informacje-ogólne)
