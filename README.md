@@ -1,5 +1,4 @@
-# Projekt Python - INEZ MAŁECKA
-
+# FYI - its an abandoned project, it needs much love and code refinement
 > Niniejszy projekt został wykonany na zaliczenie pierwszego semestru studiów niestacjonarnych na kierunku INFORMATYKA na Uniwersytecie DSW, przez studentkę Inez Małecka o numerze indeksu 52738
 
 ## Spis Treści
